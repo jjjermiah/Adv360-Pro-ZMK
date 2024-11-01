@@ -31,7 +31,7 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
+            label = "Home Row Right";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
