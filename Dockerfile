@@ -11,6 +11,13 @@ RUN west update
 # West Zephyr export
 RUN west zephyr-export
 
-COPY bin/build.sh ./
+COPY bin/build.sh ./bin/build.sh
 
-CMD ["./build.sh"]
+# make sure that the build script is executable
+RUN chmod +x ./bin/build.sh
+
+# make sure that the build script exists
+RUN ls -la 
+RUN ls -la config
+
+CMD ["./bin/build.sh"]

@@ -10,8 +10,15 @@ COMMIT="${COMMIT:-$(echo xxxxxx)}"
 west build -s zmk/app -d build/left -b adv360_left -- -DZMK_CONFIG="${PWD}/config"
 # Adv360 Left Kconfig file
 grep -vE '(^#|^$)' build/left/zephyr/.config
+
+# Make sure firmware directory exists
+mkdir -p ./firmware
+
 # Rename zmk.uf2
 cp build/left/zephyr/zmk.uf2 "./firmware/${TIMESTAMP}-${COMMIT}-left.uf2"
+
+# Also create a 'latest-left.uf2' file
+cp build/left/zephyr/zmk.uf2 "./firmware/latest-left.uf2"
 
 # Build right side if selected
 if [ "${BUILD_RIGHT}" = true ]; then
@@ -21,4 +28,7 @@ if [ "${BUILD_RIGHT}" = true ]; then
     grep -vE '(^#|^$)' build/right/zephyr/.config
     # Rename zmk.uf2
     cp build/right/zephyr/zmk.uf2 "./firmware/${TIMESTAMP}-${COMMIT}-right.uf2"
+
+    # Also create a 'latest-right.uf2' file
+    cp build/right/zephyr/zmk.uf2 "./firmware/latest-right.uf2"
 fi
