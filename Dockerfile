@@ -17,7 +17,7 @@ COPY bin/build.sh ./bin/build.sh
 RUN chmod +x ./bin/build.sh
 
 # make sure that the build script exists
-RUN ls -la 
+RUN ls -la
 RUN ls -la config
 
 CMD ["./bin/build.sh"]
