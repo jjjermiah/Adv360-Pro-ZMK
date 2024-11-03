@@ -1,0 +1,31 @@
+[project]
+authors = ["Jermiah Joseph <jermiahjoseph98@gmail.com>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "Adv360-Pro-ZMK"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+make.cmd = "make"
+make.inputs = [
+  "config/west.yml",
+  "config/adv360_left.keymap",
+  "config/adv360_right.keymap",
+  "config/adv360.keymap",
+  "Dockerfile",
+  "bin/build.sh",
+  "bin/get_version.sh",
+  "bin/flashadv.sh",
+]
+
+[target.osx-arm64.tasks]
+flash.cmd = "sudo ./bin/flashadv.sh"
+flash.description = "mounts the flash drive"
+flash.depends_on = ["make"]
+
+port.cmd = "cat firmware/latest-left.uf2 > /Volumes/ADV360PRO/left.uf2"
+port.description = "copies the latest firmware to the flash drive"
+port.depends_on = ["flash"]
+
+[dependencies]
