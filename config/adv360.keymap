@@ -47,11 +47,95 @@
             hold-trigger-on-release;
         };
 
+        pkp_n1: plus_kp_n1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "plus_kp_n1";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp KP_N1>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
         lkp_n2: left_bracket_kp_n2 {
             compatible = "zmk,behavior-mod-morph";
             label = "left_bracket_kp_n2";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp KP_N2>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        lkp_n3: left_brace_kp_n3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "left_brace_kp_n3";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp KP_N3>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        lkp_n4: left_parenthesis_kp_n4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "left_parenthesis_kp_n4";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp KP_N4>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        akp_n5: amps_kp_n5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "amps_kp_n5";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&kp KP_N5>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        ekp_n6: equal_kp_n6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "equal_kp_n6";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp KP_N6>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        rkp_n7: right_parenthesis_kp_n7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "right_parenthesis_kp_n7";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp KP_N7>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        rkp_n8: right_brace_kp_n8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "right_brace_kp_n8";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACE>, <&kp KP_N8>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        rkp_n9: right_bracket_kp_n9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "right_bracket_kp_n9";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp KP_N9>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        skp_n0: star_kp_n0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "star_kp_n0";
+            #binding-cells = <0>;
+            bindings = <&kp STAR>, <&kp KP_N0>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        eprcnt: excl_prcnt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "excl_prcnt";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL>, <&kp PRCNT>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        col_semi: colon_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "colon_semicolon";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+        back_delete: back_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "back_delete";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
@@ -69,14 +153,13 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         default_layer {
             bindings = <
-&kp EQUAL  &kp EXCLAMATION  &lkp_n2           &kp LEFT_BRACE     &kp LEFT_PARENTHESIS  &kp AMPERSAND  &tog 1                                                                   &mo 3                 &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE     &kp RIGHT_BRACKET  &kp POUND            &kp MINUS
+&kp EQUAL  &pkp_n1          &lkp_n2           &lkp_n3            &lkp_n4               &akp_n5        &tog 1                                                                   &mo 3                 &ekp_n6     &rkp_n7               &rkp_n8             &rkp_n9            &skp_n0              &eprcnt
 &kp TAB    &kp Q            &kp W             &kp E              &kp R                 &kp T          &kp SLASH                                                                &kp NON_US_BACKSLASH  &kp Y      &kp U                  &kp I               &kp O              &kp P                &kp AT_SIGN
-&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml LEFT_CONTROL F   &kp G          &kp DOUBLE_QUOTES  &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &kp SINGLE_QUOTE      &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hml RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SQT
+&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml LEFT_CONTROL F   &kp G          &col_semi          &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &kp SQT               &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hml RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SINGLE_QUOTE
 &kp LSHFT  &kp Z            &kp X             &kp C              &kp V                 &kp B                                               &kp HOME      &kp PG_UP                                   &kp N      &kp M                  &kp COMMA           &kp DOT            &kp FSLH             &kp RSHFT
-&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &kp BACKSPACE      &kp ESCAPE        &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp DOLLAR         &kp PERCENT          &mo 2
+&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &back_delete       &kp ESCAPE        &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp DOLLAR         &kp PERCENT          &mo 2
             >;
         };
 

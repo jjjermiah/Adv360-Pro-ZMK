@@ -2,19 +2,19 @@ layout: {qmk_keyboard: adv360}
 layers:
   default:
   - - '='
-    - '!'
+    - {t: +, s: KP 1}
     - {t: '[', s: KP 2}
-    - '{'
-    - (
-    - '&'
+    - {t: '{', s: KP 3}
+    - {t: (, s: KP 4}
+    - {t: '&', s: KP 5}
     - {t: keypad, h: toggle}
     - mod
-    - '='
-    - )
-    - '}'
-    - ']'
-    - '#'
-    - '-'
+    - {t: '=', s: KP 6}
+    - {t: ), s: KP 7}
+    - {t: '}', s: KP 8}
+    - {t: ']', s: KP 9}
+    - {t: '*', s: KP 0}
+    - {t: '!', s: '%'}
     - TAB
     - Q
     - W
@@ -35,7 +35,7 @@ layers:
     - {t: D, h: LEFT SHIFT}
     - {t: F, h: LEFT CONTROL}
     - G
-    - '"'
+    - {t: ':', s: ;}
     - LEFT COMMAND
   - - LALT
     - LGUI
@@ -55,7 +55,24 @@ layers:
     - B
     - HOME
     - PG UP
-  - [N, M, ',', ., /, RSHFT, fn, '`', CAPS, LEFT, RIGHT, BACKSPACE, ESCAPE, END, PG DN, ENTER, SPACE, UP]
+  - - N
+    - M
+    - ','
+    - .
+    - /
+    - RSHFT
+    - fn
+    - '`'
+    - CAPS
+    - LEFT
+    - RIGHT
+    - {t: BACKSPACE, s: DEL}
+    - ESCAPE
+    - END
+    - PG DN
+    - ENTER
+    - SPACE
+    - UP
   - [DOWN, $, '%', fn]
   keypad:
   - - '='
