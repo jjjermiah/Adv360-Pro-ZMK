@@ -66,9 +66,9 @@
             bindings = <
 &kp EQUAL  &kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE     &kp LEFT_PARENTHESIS  &kp AMPERSAND  &tog 1                                                                   &mo 3                 &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE     &kp RIGHT_BRACKET  &kp POUND            &kp MINUS
 &kp TAB    &kp Q            &kp W             &kp E              &kp R                 &kp T          &kp SLASH                                                                &kp NON_US_BACKSLASH  &kp Y      &kp U                  &kp I               &kp O              &kp P                &kp AT_SIGN
-&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml F F              &kp G          &kp DOUBLE_QUOTES  &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &kp SINGLE_QUOTE      &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hml RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SQT
+&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml LEFT_CONTROL F   &kp G          &kp DOUBLE_QUOTES  &kp LEFT_COMMAND  &kp LALT      &kp LGUI   &kp RCTRL  &kp SINGLE_QUOTE      &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hml RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z            &kp X             &kp C              &kp V                 &kp B                                               &kp HOME      &kp PG_UP                                   &kp N      &kp M                  &kp COMMA           &kp DOT            &kp FSLH             &kp RSHFT
-&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &kp BSPC           &kp DEL           &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp LBKT           &kp PERCENT          &mo 2
+&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &kp BSPC           &kp DEL           &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp DOLLAR         &kp PERCENT          &mo 2
             >;
         };
 
