@@ -19,6 +19,17 @@ make.inputs = [
   "bin/flashadv.sh",
 ]
 
+generate_keymap.cmd = "keymap parse -c 18 -z config/adv360.keymap > sweep_keymap.yaml"
+generate_keymap.description = "generates a keymap yaml for the keymap-drawer"
+generate_keymap.inputs = ["config/adv360.keymap"]
+generate_keymap.outputs = ["sweep_keymap.yaml"]
+
+svg.cmd = "keymap draw sweep_keymap.yaml >sweep_keymap.ortho.svg"
+svg.description = "generates a keymap svg"
+svg.depends_on = ["generate_keymap"]
+svg.inputs = ["sweep_keymap.yaml"]
+svg.outputs = ["sweep_keymap.ortho.svg"]
+
 [target.osx-arm64.tasks]
 flash.cmd = "sudo ./bin/flashadv.sh"
 flash.description = "mounts the flash drive"
@@ -29,3 +40,7 @@ port.description = "copies the latest firmware to the flash drive"
 port.depends_on = ["flash"]
 
 [dependencies]
+python = ">=3.13.0,<4"
+
+[pypi-dependencies]
+keymap-drawer = ">=0.18.1, <0.19"

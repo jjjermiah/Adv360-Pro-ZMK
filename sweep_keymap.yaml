@@ -1,0 +1,182 @@
+layout: {qmk_keyboard: adv360}
+layers:
+  default:
+  - - '='
+    - '!'
+    - {t: '[', s: KP 2}
+    - '{'
+    - (
+    - '&'
+    - {t: keypad, h: toggle}
+    - mod
+    - '='
+    - )
+    - '}'
+    - ']'
+    - '#'
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+  - - R
+    - T
+    - /
+    - \
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - '@'
+    - ESC
+    - {t: A, h: LGUI}
+    - {t: S, h: LEFT ALT}
+    - {t: D, h: LEFT SHIFT}
+    - {t: F, h: LEFT CONTROL}
+    - G
+    - '"'
+    - LEFT COMMAND
+  - - LALT
+    - LGUI
+    - RCTRL
+    - ''''
+    - H
+    - {t: J, h: LCTRL}
+    - {t: K, h: RIGHT SHIFT}
+    - {t: L, h: RIGHT ALT}
+    - {t: ;, h: LGUI}
+    - ''''
+    - LSHFT
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - HOME
+    - PG UP
+  - [N, M, ',', ., /, RSHFT, fn, '`', CAPS, LEFT, RIGHT, BACKSPACE, ESCAPE, END, PG DN, ENTER, SPACE, UP]
+  - [DOWN, $, '%', fn]
+  keypad:
+  - - '='
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - {t: ▽, type: trans}
+    - mod
+    - '6'
+    - KP NUM
+    - KP EQUAL
+    - KP DIVIDE
+    - KP MULTIPLY
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+  - [R, T, '', '', Y, KP 7, KP 8, KP 9, KP MINUS, \, ESC, A, S, D, F, G, '', LCTRL]
+  - [LALT, LGUI, RCTRL, '', H, KP 4, KP 5, KP 6, KP PLUS, '''', LSHFT, Z, X, C, V, B, HOME, PG UP]
+  - [N, KP 1, KP 2, KP 3, KP ENTER, RSHFT, fn, '`', CAPS, LEFT, RIGHT, BSPC, DEL, END, PG DN, ENTER, KP 0, UP]
+  - [DOWN, KP DOT, ']', fn]
+  fn:
+  - - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - {t: keypad, h: toggle}
+    - mod
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+    - F12
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  mod:
+  - - ''
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+    - ''
+    - {type: held}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - ['', '', '&bootloader', '&bootloader', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', BT CLR, '', RGB MEFS CMD 5, '', '', '', '', '', '', '', '', '', '', '&macro_ver', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&bl BL_TOG', RGB TOG, '&bl BL_INC']
+  - ['&bl BL_DEC', '', '', '']
