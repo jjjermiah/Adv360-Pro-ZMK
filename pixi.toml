@@ -39,6 +39,10 @@ port.cmd = "cat firmware/latest-left.uf2 > /Volumes/ADV360PRO/left.uf2"
 port.description = "copies the latest firmware to the flash drive"
 port.depends_on = ["flash"]
 
+port_right.cmd = "cat firmware/latest-right.uf2 > /Volumes/ADV360PRO/right.uf2"
+port_right.description = "copies the latest firmware to the flash drive"
+port_right.depends_on = ["flash"]
+
 [dependencies]
 python = ">=3.13.0,<4"
 
