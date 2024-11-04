@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: refil
       url-base: https://github.com/refil
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: refil
@@ -11,6 +13,7 @@ manifest:
       import: app/west.yml
     - name: zmk-helpers
       revision: main
-      path: modules/helpers
+      # path: modules/helpers
+      remote: urob
   self:
     path: config
