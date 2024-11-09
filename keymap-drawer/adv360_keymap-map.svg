@@ -286,8 +286,9 @@ path.combo {
 <g transform="translate(449, 295) rotate(15.0)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Sft+</tspan><tspan x="0" dy="1.2em">LCTRL</tspan>
+<tspan x="0" dy="-1.2em" style="font-size: 88%">Gui+Alt+</tspan><tspan x="0" dy="1.2em" style="font-size: 88%">LCTRL</tspan>
 </text>
+<text x="0" y="24" class="key hold"><tspan style="font-size: 70%">Sft+ LCTRL</tspan></text>
 </g>
 <g transform="translate(559, 295) rotate(-15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -414,7 +415,8 @@ path.combo {
 </g>
 <g transform="translate(373, 361) rotate(15.0)" class="key keypos-66">
 <rect rx="6" ry="6" x="-26" y="-54" width="52" height="108" class="key"/>
-<text x="0" y="0" class="key tap">ESCAPE</text>
+<text x="0" y="0" class="key tap">ESC</text>
+<text x="0" y="52" class="key hold"><tspan style="font-size: 78%">Sft+ LGUI</tspan></text>
 </g>
 <g transform="translate(420, 403) rotate(15.0)" class="key keypos-67">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

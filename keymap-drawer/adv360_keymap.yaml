@@ -37,7 +37,7 @@ layers:
     - G
     - {t: ':', s: ;}
     - LEFT COMMAND
-  - - Sft+ LCTRL
+  - - {t: Gui+Alt+ LCTRL, h: Sft+ LCTRL}
     - LGUI
     - RCTRL
     - ''''
@@ -67,7 +67,7 @@ layers:
     - LEFT
     - RIGHT
     - {t: BACKSPACE, s: DEL}
-    - ESCAPE
+    - {t: ESC, h: Sft+ LGUI}
     - END
     - PG DN
     - ENTER

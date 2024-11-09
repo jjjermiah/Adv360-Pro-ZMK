@@ -177,7 +177,7 @@
 		cmd_tab_combo {
 			timeout-ms = <50>;
 			key-positions = <5 6>;// Positions of the T key and the key directly after it
-			bindings = <&kp LGUI &kp TAB>;// Command + Tab
+			bindings = <&kp LGUI &kp TAB>;// Command + Tabxx
 		};
 	};
 	
@@ -190,9 +190,9 @@
 			bindings = <
 			&kp EQUAL  &pkp_n1          &lkp_n2           &lkp_n3            &lkp_n4               &akp_n5        &tog 1                                                                   &mo 3                 &ekp_n6     &rkp_n7               &rkp_n8             &rkp_n9            &skp_n0              &eprcnt
 			&kp TAB    &kp Q            &kp W             &kp E              &kp R                 &kp T          &kp SLASH                                                                &kp NON_US_BACKSLASH  &kp Y      &kp U                  &kp I               &kp O              &kp P                &kp MINUS
-			&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml LEFT_CONTROL F   &kp G          &col_semi          &kp LEFT_COMMAND  &kp LS(LCTRL)      &kp LGUI   &kp RCTRL  &kp SQT               &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hmr RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SINGLE_QUOTE
+			&kp ESC    &hml LGUI A      &hml LEFT_ALT S   &hml LEFT_SHIFT D  &hml LEFT_CONTROL F   &kp G          &col_semi          &kp LEFT_COMMAND  &hml LG(LA(LCTRL)) LCTRL &kp LGUI   &kp RCTRL  &kp SQT               &kp H      &hmr LCTRL J           &hmr RIGHT_SHIFT K  &hmr RIGHT_ALT L   &hmr LGUI SEMICOLON  &kp SINGLE_QUOTE
 			&kp LSHFT  &kp Z            &kp X             &kp C              &kp V                 &kp B                                               &kp HOME      &kp PG_UP                                   &kp N      &kp M                  &kp COMMA           &kp DOT            &kp HASH             &kp RSHFT
-			&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &back_delete       &kp ESCAPE        &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp DOLLAR         &kp AT_SIGN         &mo 2
+			&mo 2      &kp GRAVE        &kp CAPS          &kp LEFT           &kp RIGHT                            &back_delete       &hml LS(LGUI) ESC &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                        &kp UP                 &kp DOWN            &kp DOLLAR         &kp AT_SIGN         &mo 2
 			>;
 		};
 		

@@ -19,15 +19,15 @@ make.inputs = [
 ]
 make.description = "Builds the adv360 firmware and generates firmware files in the firmware/ directory"
 
-generate_keymap.cmd = "keymap parse --columns 18 --zmk-keymap config/adv360.keymap > keymap-drawer/adv360_keymap.yaml"
+generate_keymap.cmd = "keymap --config keymap-drawer/config.yaml parse --columns 18 --zmk-keymap config/adv360.keymap > keymap-drawer/adv360_keymap.yaml"
 generate_keymap.description = "generates a keymap yaml for the keymap-drawer"
-generate_keymap.inputs = ["config/adv360.keymap"]
+generate_keymap.inputs = ["config/adv360.keymap", "keymap-drawer/config.yaml"]
 generate_keymap.outputs = ["keymap-drawer/adv360_keymap.yaml"]
 
 svg.cmd = "keymap --config keymap-drawer/config.yaml draw -s base keypad -o keymap-drawer/adv360_keymap-map.svg keymap-drawer/adv360_keymap.yaml"
 svg.description = "generates a keymap svg"
 svg.depends_on = ["generate_keymap"]
-svg.inputs = ["keymap-drawer/adv360_keymap.yaml"]
+svg.inputs = ["keymap-drawer/adv360_keymap.yaml", "keymap-drawer/config.yaml"]
 svg.outputs = ["keymap-drawer/adv360_keymap-map.svg"]
 
 [target.unix.tasks]
