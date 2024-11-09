@@ -16,22 +16,22 @@ make.inputs = [
   "Dockerfile",
   "bin/build.sh",
   "bin/get_version.sh",
-  "bin/flashadv.sh",
 ]
+make.description = "Builds the adv360 firmware and generates firmware files in the firmware/ directory"
 
-generate_keymap.cmd = "keymap parse -c 18 -z config/adv360.keymap > sweep_keymap.yaml"
+generate_keymap.cmd = "keymap parse --columns 18 --zmk-keymap config/adv360.keymap > keymap-drawer/adv360_keymap.yaml"
 generate_keymap.description = "generates a keymap yaml for the keymap-drawer"
 generate_keymap.inputs = ["config/adv360.keymap"]
-generate_keymap.outputs = ["sweep_keymap.yaml"]
+generate_keymap.outputs = ["keymap-drawer/adv360_keymap.yaml"]
 
-svg.cmd = "keymap draw sweep_keymap.yaml >sweep_keymap.ortho.svg"
+svg.cmd = "keymap --config keymap-drawer/config.yaml draw -s base keypad -o keymap-drawer/adv360_keymap-map.svg keymap-drawer/adv360_keymap.yaml"
 svg.description = "generates a keymap svg"
 svg.depends_on = ["generate_keymap"]
-svg.inputs = ["sweep_keymap.yaml"]
-svg.outputs = ["sweep_keymap.ortho.svg"]
+svg.inputs = ["keymap-drawer/adv360_keymap.yaml"]
+svg.outputs = ["keymap-drawer/adv360_keymap-map.svg"]
 
-[target.osx-arm64.tasks]
-flash.cmd = "sudo ./bin/flashadv.sh"
+[target.unix.tasks]
+flash.cmd = "./bin/flashadv.sh"
 flash.description = "mounts the flash drive"
 flash.depends_on = ["make"]
 
@@ -42,6 +42,12 @@ port.depends_on = ["flash"]
 port_right.cmd = "cat firmware/latest-right.uf2 > /Volumes/ADV360PRO/right.uf2"
 port_right.description = "copies the latest firmware to the flash drive"
 port_right.depends_on = ["flash"]
+
+run = { depends-on = [
+  'port',
+  'svg',
+], description = "flashes the adv360 and generates the svg" }
+
 
 [dependencies]
 python = ">=3.13.0,<4"

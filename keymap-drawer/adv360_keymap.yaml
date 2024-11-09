@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: adv360}
 layers:
-  default:
+  base:
   - - '='
     - {t: +, s: KP 1}
     - {t: '[', s: KP 2}
@@ -28,7 +28,7 @@ layers:
     - I
     - O
     - P
-    - '@'
+    - '-'
     - ESC
     - {t: A, h: LGUI}
     - {t: S, h: LEFT ALT}
@@ -37,7 +37,7 @@ layers:
     - G
     - {t: ':', s: ;}
     - LEFT COMMAND
-  - - LALT
+  - - Sft+ LCTRL
     - LGUI
     - RCTRL
     - ''''
@@ -59,7 +59,7 @@ layers:
     - M
     - ','
     - .
-    - /
+    - '#'
     - RSHFT
     - fn
     - '`'
@@ -73,7 +73,7 @@ layers:
     - ENTER
     - SPACE
     - UP
-  - [DOWN, $, '%', fn]
+  - [DOWN, $, '@', fn]
   keypad:
   - - '='
     - '1'

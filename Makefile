@@ -1,3 +1,27 @@
+# This Makefile is used to build and manage the firmware for a custom keyboard using Docker or Podman.
+# It includes targets to build the firmware for both the left and right parts of the keyboard, as well as
+# targets to clean up the generated firmware files and Docker images.
+#
+# Key Variables:
+# - DOCKER: Determines whether to use Podman or Docker for container operations.
+# - TIMESTAMP: Captures the current timestamp in UTC for versioning.
+# - COMMIT: Gets the current short git commit hash.
+# - SELINUX1, SELINUX2: Handles SELinux file context differences between macOS and other systems.
+#
+# Key Targets:
+# - all: Builds and runs the firmware for the right part of the keyboard.
+# - left: Builds and runs the firmware for the left part of the keyboard.
+# - clean_firmware: Removes all firmware files.
+# - clean_image: Removes Docker images used for building.
+# - clean: Cleans both firmware files and Docker images.
+#
+# Usage:
+# - To build and run the firmware for the right part of the keyboard, run `make all`.
+# - To build and run the firmware for the left part of the keyboard, run `make left`.
+# - To clean up firmware files, run `make clean_firmware`.
+# - To clean up Docker images, run `make clean_image`.
+# - To clean up both firmware files and Docker images, run `make clean`.
+
 # Determine whether to use podman or docker for container operations
 DOCKER := $(shell { command -v podman || command -v docker; })
 

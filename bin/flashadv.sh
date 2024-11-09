@@ -5,7 +5,6 @@
 # the file system to be corrupted.
 #
 
-
 # Find the disk associated with ADV360PRO by running `df` and using `grep` and `cut` to extract the device identifier
 disky=`df | grep ADV360PRO | cut -d" " -f1`
 
@@ -16,13 +15,13 @@ if [ -z "$disky" ]; then
 fi
 
 # Unmount the ADV360PRO volume if it's mounted
-sudo umount /Volumes/ADV360PRO
+umount /Volumes/ADV360PRO
 
 # Create the ADV360PRO directory under /Volumes
-sudo mkdir /Volumes/ADV360PRO
+mkdir /Volumes/ADV360PRO
 
 # Pause execution for 2 seconds to ensure previous commands complete
 sleep 2
 
 # Mount the disk at /Volumes/ADV360PRO with noasync option to prevent delayed writes
-sudo mount -v -o noasync -t msdos $disky /Volumes/ADV360PRO
+mount -v -o noasync -t msdos $disky /Volumes/ADV360PRO
