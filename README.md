@@ -2,7 +2,11 @@
 
 
 
+```
+sudo mkdir -p /Volumes/ADV
 
+sudo mount -t msdos /dev/disk4 /Volumes/ADV
+```
 
 
 

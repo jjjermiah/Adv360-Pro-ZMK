@@ -158,7 +158,7 @@ parse_config:
     MINUS: '-'
     UNDERSCORE: _
     UNDER: _
-    SLASH: /
+    SLASH: '/?'
     FSLH: /
     QUESTION: '?'
     QMARK: '?'
@@ -197,6 +197,7 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
+    NUBS: '|'
   zmk_combos: {}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []

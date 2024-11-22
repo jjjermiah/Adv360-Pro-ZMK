@@ -2,7 +2,7 @@ layout: {qmk_keyboard: adv360}
 layers:
   base:
   - - '='
-    - {t: +, s: KP 1}
+    - {t: '!', s: KP 1}
     - {t: '[', s: KP 2}
     - {t: '{', s: KP 3}
     - {t: (, s: KP 4}
@@ -14,15 +14,15 @@ layers:
     - {t: '}', s: KP 8}
     - {t: ']', s: KP 9}
     - {t: '*', s: KP 0}
-    - {t: '!', s: '%'}
+    - {t: +, s: '%'}
     - TAB
     - Q
     - W
     - E
   - - R
     - T
-    - /
-    - \
+    - /?
+    - '|'
     - Y
     - U
     - I
@@ -36,8 +36,8 @@ layers:
     - {t: F, h: LEFT CONTROL}
     - G
     - {t: ':', s: ;}
-    - LEFT COMMAND
-  - - {t: Gui+Alt+ LCTRL, h: Sft+ LCTRL}
+    - '|'
+  - - {t: LCTRL, h: Gui+Alt+ LCTRL}
     - LGUI
     - RCTRL
     - ''''

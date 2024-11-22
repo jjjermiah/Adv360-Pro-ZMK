@@ -37,4 +37,4 @@ sleep 2
 # mount -v -o noasync -t msdos $disky ./Volumes/ADV360PRO
 
 # use diskutil to mount the disk at ./Volumes/ADV360PRO with noasync option to prevent delayed writes
-diskutil mountDisk $disky
+sudo mount -t msdos /dev/disk4 /Volumes/ADV
