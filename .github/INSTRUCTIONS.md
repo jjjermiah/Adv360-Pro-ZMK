@@ -15,7 +15,7 @@ Whenever you modify the keymap, **you must document the change here** with:
 ### Layer Overview
 - **Layer 0 (Base)**: Default typing layer with home row mods on F/J
 - **Layer 1 (Kp)**: Keypad layer with numpad on right hand
-- **Layer 2 (Fn)**: Function keys + Mac shortcuts
+- **Layer 2 (Fn)**: Function keys + Mac shortcuts 
 - **Layer 3 (Prime)**: Symbol/programming layer
 - **Layer 4 (Mod)**: System/Bluetooth/RGB controls
 
@@ -24,6 +24,11 @@ Whenever you modify the keymap, **you must document the change here** with:
 ## Changes Log
 
 ### 2025-11-17: Initial Documentation & Recent Changes
+
+#### Fn Layer Tap-Dance (Base Layer)
+- **Changed**: Fn layer key (bottom-left) now has tap-dance behavior
+- **Behavior**: Single tap/hold → Fn layer (mo 2), Double-tap → Save (Cmd+S)
+- **Reason**: Quick save access without holding Fn then pressing S
 
 #### ESC/Shift+Alt Key (Base Layer)
 - **Changed**: DEL key in left thumb cluster → ESC key with Shift+Alt on hold
