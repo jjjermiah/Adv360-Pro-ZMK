@@ -1,0 +1,225 @@
+layout: {zmk_keyboard: adv360}
+layers:
+  Base:
+  - - '='
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - {t: Kp, h: toggle}
+    - Mod
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+  - - R
+    - T
+    - ''
+    - ''
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - \
+    - ESC
+    - A
+    - S
+    - D
+    - {t: F, h: LCTRL}
+    - G
+    - ''
+    - LCTRL
+  - - LALT
+    - LGUI
+    - RCTRL
+    - ''
+    - H
+    - {t: J, h: RCTRL}
+    - K
+    - L
+    - ;
+    - ''''
+    - LSHFT
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - HOME
+    - PG UP
+  - - N
+    - M
+    - ','
+    - .
+    - /
+    - RSHFT
+    - Fn
+    - '`'
+    - CAPS
+    - LEFT
+    - RIGHT
+    - BSPC
+    - {t: ESC, h: Sft+ LALT}
+    - END
+    - PG DN
+    - ENTER
+    - SPACE
+    - UP
+  - [DOWN, '[', ']', prime]
+  Kp:
+  - - '='
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - {t: ▽, type: trans}
+    - Mod
+    - '6'
+    - KP NUM
+    - KP EQUAL
+    - KP DIVIDE
+    - KP MULTIPLY
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+  - [R, T, '', '', Y, KP 7, KP 8, KP 9, KP MINUS, \, ESC, A, S, D, F, G, '', LCTRL]
+  - [LALT, LGUI, RCTRL, '', H, KP 4, KP 5, KP 6, KP PLUS, '''', LSHFT, Z, X, C, V, B, HOME, PG UP]
+  - [N, KP 1, KP 2, KP 3, KP ENTER, RSHFT, Fn, '`', CAPS, LEFT, RIGHT, BSPC, DEL, END, PG DN, ENTER, KP 0, UP]
+  - [DOWN, KP DOT, ']', prime]
+  Fn:
+  - - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - F6
+    - {t: Kp, h: toggle}
+    - prime
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+    - F12
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&Mac_Select_All'
+    - '&Mac_Save'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&Mac_Undo'
+    - '&Mac_Cut'
+    - '&Mac_Copy'
+    - '&Mac_Paste'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  prime:
+  - - '|'
+    - +
+    - '['
+    - '{'
+    - (
+    - '&'
+    - {t: Kp, h: toggle}
+    - Mod
+    - '='
+    - (
+    - '{'
+    - '['
+    - '*'
+    - '-'
+    - TAB
+    - Q
+    - W
+    - E
+  - [R, T, '', '&macro_kinesis', Y, U, I, O, P, \, ESC, A, S, D, F, G, '', LCTRL]
+  - [LALT, LGUI, RCTRL, '', H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, HOME, PG UP]
+  - [N, M, ',', ., /, RSHFT, Fn, '`', CAPS, LEFT, RIGHT, BKSP, DEL, END, PG DN, ENTER, SPACE, UP]
+  - - DOWN
+    - '['
+    - ']'
+    - {t: prime, type: held}
+  Mod:
+  - - ''
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - {t: BT, h: '4'}
+    - ''
+    - {type: held}
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  - ['', '', '&bootloader', '&bootloader', '', '', '', '', '', '', '&studio_unlock', '', '', '', '', '', '', '']
+  - ['', BT CLR, '', '&stp STP_BAT', '', '', '', '', '', '', '', '', '', '', '&macro_ver', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&bl BL_TOG', RGB TOG, '&bl BL_INC']
+  - ['&bl BL_DEC', '', '', '']

@@ -1,1 +1,4 @@
 /firmware/*.uf2
+# pixi environments
+.pixi/*
+!.pixi/config.toml

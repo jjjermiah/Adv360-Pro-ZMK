@@ -12,6 +12,8 @@ west build -s zmk/app -p -d build/left -b adv360_left -S studio-rpc-usb-uart -- 
 grep -vE '(^#|^$)' build/left/zephyr/.config
 # Rename zmk.uf2
 cp build/left/zephyr/zmk.uf2 "./firmware/${TIMESTAMP}-${COMMIT}-left-clique.uf2"
+# also call it latest-left-clique.uf2 for convenience
+cp build/left/zephyr/zmk.uf2 "./firmware/latest-left-clique.uf2"
 
 # Build right side if selected
 if [ "${BUILD_RIGHT}" = true ]; then
@@ -21,4 +23,6 @@ if [ "${BUILD_RIGHT}" = true ]; then
     grep -vE '(^#|^$)' build/right/zephyr/.config
     # Rename zmk.uf2
     cp build/right/zephyr/zmk.uf2 "./firmware/${TIMESTAMP}-${COMMIT}-right-clique.uf2"
+    # also call it latest-right-clique.uf2 for convenience
+    cp build/right/zephyr/zmk.uf2 "./firmware/latest-right-clique.uf2"
 fi
