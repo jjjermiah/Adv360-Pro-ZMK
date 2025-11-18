@@ -59,7 +59,7 @@ layers:
     - M
     - ','
     - .
-    - /
+    - {t: '#', s: '%'}
     - RSHFT
     - {t: '&Mac_Save', h: Fn}
     - '`'
@@ -73,7 +73,10 @@ layers:
     - ENTER
     - SPACE
     - UP
-  - [DOWN, '[', ']', prime]
+  - - DOWN
+    - {t: $, s: '@'}
+    - '['
+    - prime
   Kp:
   - - '='
     - '1'
@@ -184,9 +187,9 @@ layers:
     - {t: Kp, h: toggle}
     - Mod
     - '='
-    - (
-    - '{'
-    - '['
+    - )
+    - '}'
+    - ']'
     - '*'
     - '-'
     - TAB
