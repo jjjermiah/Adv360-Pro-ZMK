@@ -42,7 +42,6 @@ $DOCKER run --rm -it --name zmk \
 
 # Reset version.dtsi
 git checkout config/version.dtsi
-
 echo "Build complete! Firmware files are in firmware/"
 echo ""
 echo "Waiting for ADV360 board to be mounted..."

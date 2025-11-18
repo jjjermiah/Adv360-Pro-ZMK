@@ -66,24 +66,32 @@
 			mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 		};
 		
-		quotes_morph: quotes_morph {
-			compatible = "zmk,behavior-mod-morph";
-			label = "QUOTES_MORPH";
-			#binding-cells = <0>;
-			bindings = <&macro_quotes>, <&macro_dquotes>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
+	quotes_morph: quotes_morph {
+		compatible = "zmk,behavior-mod-morph";
+		label = "QUOTES_MORPH";
+		#binding-cells = <0>;
+		bindings = <&macro_quotes>, <&macro_dquotes>;
+		mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
-
-	keymap {
+	
+	pipe_shftalt: pipe_shiftalt {
+		compatible = "zmk,behavior-hold-tap";
+		label = "PIPE_SHIFTALT";
+		#binding-cells = <2>;
+		tapping-term-ms = <200>;
+		quick_tap_ms = <175>;
+		flavor = "tap-preferred";
+		bindings = <&kp>, <&kp>;
+	};
+	};	keymap {
 		compatible = "zmk,keymap";
 		
 		default_layer {
 			display-name = "Base";
 			bindings = <
 			&kp EQUAL      &kp N1     &kp N2    &kp N3         &kp N4         &kp N5   &tog 1                                                                      &mo 4       &kp N6     &kp N7         &kp N8      &kp N9     &kp N0     &pl_pctn
-			&kp TAB        &kp Q      &kp W     &kp E          &kp R          &kp T    &kp FSLH                                                                       &kp BSLH    &kp Y      &kp U          &kp I       &kp O      &kp P      &kp MINUS
-			&Mac_Save      &hm LGUI A    &hm LALT S    &hm LSHFT D          &hm LCTRL F    &kp G    &col_semi           &kp LS(LALT)   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hm RCTRL J    &hm RSHFT K       &hm RALT L      &hm RGUI SEMI    &kp SQT
+		&kp TAB        &kp Q      &kp W     &kp E          &kp R          &kp T    &kp FSLH                                                                       &kp BSLH    &kp Y      &kp U          &kp I       &kp O      &kp P      &kp MINUS
+		&Mac_Save      &hm LGUI A    &hm LALT S    &hm LSHFT D          &hm LCTRL F    &kp G    &col_semi           &pipe_shftalt LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hm RCTRL J    &hm RSHFT K       &hm RALT L      &hm RGUI SEMI    &kp SQT
 			&kp LSHFT      &kp Z      &kp X     &kp C          &kp V          &kp B                                   &kp LGUI    &kp PG_UP                                   &kp N      &kp M          &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
 			&fn_save 2 0   &kp GRAVE  &kp CAPS  &kp LEFT       &kp RIGHT                &kp BSPC        &esc_alt LALT ESC          &kp LCTRL   &kp PG_DN   &kp ENTER   &kp SPACE                &kp UP     &kp DOWN       &kp LBKT    &kp RBKT   &mo 3
 			>;
