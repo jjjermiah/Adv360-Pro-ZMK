@@ -22,16 +22,6 @@
 			bindings = <&kp>, <&kp>;
 		};
 		
-		a_cmd: a_command {
-			compatible = "zmk,behavior-hold-tap";
-			label = "A_COMMAND";
-			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick_tap_ms = <175>;
-			flavor = "tap-preferred";
-			bindings = <&kp>, <&kp>;
-		};
-		
 		esc_alt: esc_alt {
 			compatible = "zmk,behavior-hold-tap";
 			label = "ESC_ALT";
