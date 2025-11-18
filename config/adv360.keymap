@@ -12,14 +12,46 @@
 		#include "macros.dtsi"
 		#include "version.dtsi"
 		
-		hm: homerow_mods {
+		// Left-hand homerow mods - "timeless" configuration
+		hml: homerow_mods_left {
 			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_MODS";
+			label = "HOMEROW_MODS_LEFT";
 			#binding-cells = <2>;
-			tapping-term-ms = <200>;
-			quick_tap_ms = <175>;
-			flavor = "tap-preferred";
+			tapping-term-ms = <280>;           // Increased for timer-less behavior
+			quick-tap-ms = <175>;
+			require-prior-idle-ms = <150>;     // KEY FIX: Eliminates typing delay
+			flavor = "balanced";               // Changed from tap-preferred
 			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = <    // Right hand + thumbs
+				7 8 9 10 11 12 13
+				21 22 23 24 25 26 27
+				39 40 41 42 43 44 45
+				54 55 56 57 58 59
+				71 72 73 74 75
+				37 38 53 68 69 70
+			>;
+			hold-trigger-on-release;           // Enable combining mods on same hand
+		};
+		
+		// Right-hand homerow mods - "timeless" configuration
+		hmr: homerow_mods_right {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS_RIGHT";
+			#binding-cells = <2>;
+			tapping-term-ms = <280>;           // Increased for timer-less behavior
+			quick-tap-ms = <175>;
+			require-prior-idle-ms = <150>;     // KEY FIX: Eliminates typing delay
+			flavor = "balanced";               // Changed from tap-preferred
+			bindings = <&kp>, <&kp>;
+			hold-trigger-key-positions = <    // Left hand + thumbs
+				0 1 2 3 4 5 6
+				14 15 16 17 18 19 20
+				28 29 30 31 32 33 34
+				46 47 48 49 50 51
+				60 61 62 63 64
+				35 36 52 65 66 67
+			>;
+			hold-trigger-on-release;           // Enable combining mods on same hand
 		};
 		
 		esc_alt: esc_alt {
@@ -97,7 +129,7 @@
 			bindings = <
 			&kp EQUAL      &kp N1     &kp N2    &kp N3         &kp N4         &kp N5   &tog 1                                                                      &mo 4       &kp N6     &kp N7         &kp N8      &kp N9     &kp N0     &pl_pctn
 			&kp TAB        &kp Q      &kp W     &kp E          &kp R          &kp T    &kp FSLH                                                                       &kp BSLH    &kp Y      &kp U          &kp I       &kp O      &kp P      &kp MINUS
-			&Mac_Save      &hm LGUI A    &hm LALT S    &hm LSHFT D          &hm LCTRL F    &kp G    &col_semi           &pipe_shftalt LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hm RCTRL J    &hm RSHFT K       &hm RALT L      &hm RGUI SEMI    &kp SQT
+			&Mac_Save      &hml LGUI A    &hml LALT S    &hml LSHFT D          &hml LCTRL F    &kp G    &col_semi           &pipe_shftalt LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hmr RCTRL J    &hmr RSHFT K       &hmr RALT L      &hmr RGUI SEMI    &kp SQT
 			&kp LSHFT      &kp Z      &kp X     &kp C          &kp V          &kp B                                   &kp LGUI    &kp PG_UP                                   &kp N      &kp M          &kp COMMA   &kp DOT    &hash_prcnt   &kp RSHFT
 			&fn_save 2 0   &kp GRAVE  &kp CAPS  &kp LEFT       &kp RIGHT                &kp BSPC        &esc_alt LALT ESC          &kp LCTRL   &kp PG_DN   &kp ENTER   &kp SPACE                &kp UP     &kp DOWN       &dollar_at    &kp LBKT   &mo 3
 			>;
