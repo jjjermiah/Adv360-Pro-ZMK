@@ -4,9 +4,6 @@
 
 *Jot down your todos here - keep them brief and clear*
 
-
-
-
 ## Instructions for LLM Assistant
 
 Please review the Quick Notes section below and for each checked item:
@@ -82,6 +79,47 @@ Please review the Quick Notes section below and for each checked item:
 - [x] Keep the shifted behavior as `<&kp DQT>` (double quote) for consistency.
 - [x] Run `make all` to build and flash the firmware.
 - [x] Test that single quote now inserts one character instead of two.
+
+---
+
+### Todo Item: Set position 67 to Alt-Tab
+**Goal:** Change key position 67 in the default layer to produce `Alt+Tab` for application switching.
+**Raw Todo:** make key position 67 be just 'Alt-Tab'
+**Steps:**
+- [ ] Locate physical position 67 in `assets/key-positions.md` to confirm it's in the left thumb cluster (third thumb key).
+- [ ] Find the corresponding binding in `config/adv360.keymap` under `default_layer` - position 67 is currently `&esc_alt LALT ESC`.
+- [ ] Replace with a simple Alt-Tab keycode or create a behavior if needed. Use `&kp LA(TAB)` for the Alt+Tab combination.
+- [ ] Regenerate the keymap diagram with `pixi run svg` to verify the visual change.
+- [ ] Run `make all` and ensure the build completes without errors.
+- [ ] Test on device to confirm Alt-Tab behavior works as expected.
+
+---
+
+### Todo Item: Set position 68 to Cmd-Space (Spotlight)
+**Goal:** Change key position 68 in the default layer to produce `Cmd+Space` for macOS Spotlight activation.
+**Raw Todo:** and make key position 68 be 'Cmd-Space' (for spotlight)
+**Steps:**
+- [ ] Locate physical position 68 in `assets/key-positions.md` to confirm it's in the right thumb cluster (first thumb key).
+- [ ] Find the corresponding binding in `config/adv360.keymap` under `default_layer` - position 68 is currently `&kp ENTER`.
+- [ ] Replace with Cmd+Space keycode: `&kp LG(SPACE)` (Left GUI + Space for macOS Spotlight).
+- [ ] Regenerate the keymap diagram with `pixi run svg` to verify the visual change.
+- [ ] Run `make all` and ensure the build completes without errors.
+- [ ] Test on device to confirm Cmd-Space opens Spotlight.
+
+---
+
+### Todo Item: Set positions 36 and 37 to prime layer switch
+**Goal:** Make both positions 36 and 37 activate the prime layer, allowing either hand to access it easily.
+**Raw Todo:** make key position 36 and 37 both be the prime mode switch
+**Steps:**
+- [ ] Locate physical positions 36 and 37 in `assets/key-positions.md` - these are thumb keys (36 is left thumb, 37 is right thumb).
+- [ ] Find the current bindings in `config/adv360.keymap` under `default_layer` - position 36 is currently `&kp BSPC` and position 37 is the mod layer switch.
+- [ ] Determine the prime layer number by counting layers in the keymap (prime is layer 3 based on the layer order).
+- [ ] Replace both bindings with `&mo 3` to momentarily activate the prime layer when held.
+- [ ] Consider if you want momentary activation (`&mo`) or toggle (`&tog`) based on usage preference.
+- [ ] Regenerate the keymap diagram with `pixi run svg` to verify both positions show the prime layer switch.
+- [ ] Run `make all` and ensure the build completes without errors.
+- [ ] Test on device to confirm both thumb keys activate the prime layer.
 
 ---
 

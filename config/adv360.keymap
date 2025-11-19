@@ -130,7 +130,7 @@
 			&kp TAB        &kp Q      &kp W     &kp E          &kp R          &kp T    &kp FSLH                                                                       &kp BSLH    &kp Y      &kp U          &kp I       &kp O      &kp P      &kp MINUS
 			&Mac_Save      &hml LGUI A    &hml LALT S    &hml LSHFT D          &hml LCTRL F    &kp G    &col_semi           &pipe_shftalt LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hmr RCTRL J    &hmr RSHFT K       &hmr RALT L      &hmr RGUI SEMI    &kp SQT
 			&kp LSHFT      &kp Z      &kp X     &kp C          &kp V          &kp B                                   &kp LGUI    &kp PG_UP                                   &kp N      &kp M          &kp COMMA   &kp DOT    &hash_prcnt   &kp RSHFT
-			&fn_save 2 0   &kp GRAVE  &kp CAPS  &kp LEFT       &kp RIGHT                &kp BSPC        &esc_alt LALT ESC          &kp LCTRL   &kp PG_DN   &kp ENTER   &kp SPACE                &kp UP     &kp DOWN       &dollar_at    &kp LBKT   &mo 3
+			&fn_save 2 0   &kp GRAVE  &kp CAPS  &kp LEFT       &kp RIGHT                &mo 3        &kp LA(TAB)          &kp LCTRL   &kp PG_DN   &mo 3   &kp LG(SPACE)                &kp UP     &kp DOWN       &dollar_at    &kp LBKT   &mo 4
 			>;
 		};
 		keypad {

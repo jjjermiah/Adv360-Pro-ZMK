@@ -40,7 +40,7 @@ layers:
   - - LALT
     - LGUI
     - RCTRL
-    - {t: '&macro_quotes', s: '&macro_dquotes'}
+    - {t: '''', s: '"'}
     - H
     - {t: J, h: RCTRL}
     - {t: K, h: RSHFT}
@@ -66,17 +66,17 @@ layers:
     - CAPS
     - LEFT
     - RIGHT
-    - BSPC
-    - {t: ESC, h: LALT}
+    - prime
+    - Alt+ TAB
     - LCTRL
     - PG DN
-    - ENTER
-    - SPACE
+    - prime
+    - Gui+ SPACE
     - UP
   - - DOWN
     - {t: $, s: '@'}
     - '['
-    - prime
+    - Mod
   Kp:
   - - '='
     - '1'
@@ -209,17 +209,14 @@ layers:
     - CAPS
     - LEFT
     - RIGHT
-    - BKSP
+    - {t: BKSP, type: held}
     - DEL
     - LCTRL
     - PG DN
     - ENTER
     - SPACE
     - UP
-  - - DOWN
-    - '['
-    - ']'
-    - {t: prime, type: held}
+  - [DOWN, '[', ']', prime]
   Mod:
   - - ''
     - {t: BT, h: '0'}
