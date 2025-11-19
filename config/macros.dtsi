@@ -91,7 +91,7 @@
     display-name = "Mac Screen Snip";
   };
 
-  Mac_Spotlight_Search: Mac_Spotlight_Search {
+  alf: alf {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings = <&kp LG(SPACE)>;

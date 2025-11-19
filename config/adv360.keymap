@@ -88,14 +88,14 @@
 			mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 		};
 		
-		quotes_morph: quotes_morph {
+		quo: quotes_morph {
 			compatible = "zmk,behavior-mod-morph";
 			label = "QUOTES_MORPH";
 			#binding-cells = <0>;
 			bindings = <&kp SQT>, <&kp DQT>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
-		pipe_shftalt: pipe_shiftalt {
+		psa: pipe_shiftalt {
 			compatible = "zmk,behavior-hold-tap";
 			label = "PIPE_SHIFTALT";
 			#binding-cells = <2>;
@@ -126,11 +126,11 @@
 		default_layer {
 			display-name = "Base";
 			bindings = <
-			&kp EQUAL      &kp N1     &kp N2    &kp N3         &kp N4         &kp N5   &tog 1                                                                      &mo 4       &kp N6     &kp N7         &kp N8      &kp N9     &kp N0     &pl_pctn
-			&kp TAB        &kp Q      &kp W     &kp E          &kp R          &kp T    &kp FSLH                                                                       &kp BSLH    &kp Y      &kp U          &kp I       &kp O      &kp P      &kp MINUS
-			&Mac_Save      &hml LGUI A    &hml LALT S    &hml LSHFT D          &hml LCTRL F    &kp G    &col_semi           &pipe_shftalt LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           &quotes_morph       &kp H      &hmr RCTRL J    &hmr RSHFT K       &hmr RALT L      &hmr RGUI SEMI    &kp SQT
-			&kp LSHFT      &kp Z      &kp X     &kp C          &kp V          &kp B                                   &kp LGUI    &kp PG_UP                                   &kp N      &kp M          &kp COMMA   &kp DOT    &hash_prcnt   &kp RSHFT
-			&fn_save 2 0   &kp GRAVE  &kp CAPS  &kp LEFT       &kp RIGHT                &mo 3        &kp LA(TAB)          &kp LCTRL   &kp PG_DN   &mo 3   &kp LG(SPACE)                &kp UP     &kp DOWN       &dollar_at    &kp LBKT   &mo 4
+			&kp EQUAL      &kp N1     		&kp N2    		&kp N3         &kp N4         &kp N5   &tog 1                                                                      					&mo 4       &kp N6     &kp N7         &kp N8      	&kp N9     	&kp N0     		&pl_pctn
+			&kp TAB        &kp Q      		&kp W     		&kp E          &kp R          &kp T    &kp FSLH                                                                       				&kp BSLH    &kp Y      &kp U          &kp I       	&kp O      	&kp P      		&kp MINUS
+			&Mac_Save      &hml LGUI A    	&hml LALT S    	&hml LSHFT D   &hml LCTRL F   &kp G    &col_semi          		&psa LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           	&quo       	&kp H      &hmr RCTRL J   &hmr RSHFT K  &hmr RALT L &hmr RGUI SEMI  &kp SQT
+			&kp LSHFT      &kp Z      		&kp X     		&kp C          &kp V          &kp B                                 				 &kp LGUI    &kp PG_UP                                   	&kp N      &kp M          &kp COMMA   	&kp DOT    	&hash_prcnt   	&kp RSHFT
+			&fn_save 2 0   &kp GRAVE  		&alf 	  		&kp LEFT       &kp RIGHT                			&kp BSPC    &esc_alt LALT ESC    &kp LCTRL   &kp PG_DN   &kp ENTER   &kp SPACE              &kp UP     &kp DOWN       &dollar_at    &kp LBKT   	&mo 3
 			>;
 		};
 		keypad {
