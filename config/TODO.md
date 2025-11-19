@@ -4,7 +4,7 @@
 
 *Jot down your todos here - keep them brief and clear*
 
-- [ ]
+
 
 
 ## Instructions for LLM Assistant
@@ -70,6 +70,18 @@ Please review the Quick Notes section below and for each checked item:
 - [x] Replace the keycodes at positions 8-11 with the opposite bracket keycodes (e.g., if positions 2-5 are `[` `]` etc., set 8-11 to the matching opposite side and include shifted variants as needed).
 - [x] Run `pixi run svg` to confirm the visual mapping.
 - [x] Run `make all` and ensure the build succeeds.
+
+---
+
+### Todo Item: Fix quotation key to insert single quote ✅
+**Goal:** Change the quote key behavior to insert just one single quote instead of two quotes with cursor positioning.
+**Raw Todo:** i hate that the quotation key inserts two by default in position 39, make it just insert one like normal
+**Steps:**
+- [x] Locate the `quotes_morph` behavior in `config/adv360.keymap` that uses `macro_quotes`.
+- [x] Change the binding from `<&macro_quotes>` to `<&kp SQT>` (normal single quote keypress).
+- [x] Keep the shifted behavior as `<&kp DQT>` (double quote) for consistency.
+- [x] Run `make all` to build and flash the firmware.
+- [x] Test that single quote now inserts one character instead of two.
 
 ---
 
