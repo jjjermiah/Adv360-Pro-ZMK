@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
+BUILD_ONLY=false
+if [ "${1:-}" = "--build-only" ]; then
+    BUILD_ONLY=true
+fi
+
 PIXI_PATH=$HOME/.pixi/bin/pixi
 
 # Determine which container runtime to use
@@ -32,7 +37,7 @@ $DOCKER build --tag zmk --file Dockerfile .
 
 # Run build for both left and right
 echo "Building firmware..."
-$DOCKER run --rm -it --name zmk \
+$DOCKER run --rm -i --name zmk \
     -v "$(pwd)/firmware:/app/firmware${SELINUX1}" \
     -v "$(pwd)/config:/app/config:ro${SELINUX2}" \
     -e TIMESTAMP="$TIMESTAMP" \
@@ -43,6 +48,11 @@ $DOCKER run --rm -it --name zmk \
 # Reset version.dtsi
 git checkout config/version.dtsi
 echo "Build complete! Firmware files are in firmware/"
+
+if [ "$BUILD_ONLY" = true ]; then
+    exit 0
+fi
+
 echo ""
 echo "Waiting for ADV360 board to be mounted..."
 echo "(Press Ctrl+C to cancel)"

@@ -37,8 +37,8 @@ layers:
     - G
     - {t: ':', s: ;}
     - {t: '|', h: Sft+ LALT}
-  - - LALT
-    - LGUI
+  - - Ctl+ LALT
+    - Gui+ LALT
     - RCTRL
     - {t: '''', s: '"'}
     - H
@@ -63,20 +63,20 @@ layers:
     - RSHFT
     - {t: '&Mac_Save', h: Fn}
     - '`'
-    - CAPS
+    - '&alf'
     - LEFT
     - RIGHT
-    - prime
-    - Alt+ TAB
+    - BSPC
+    - {t: ESC, h: LALT}
     - LCTRL
     - PG DN
-    - prime
-    - Gui+ SPACE
+    - ENTER
+    - SPACE
     - UP
   - - DOWN
     - {t: $, s: '@'}
     - '['
-    - Mod
+    - prime
   Kp:
   - - '='
     - '1'
@@ -209,14 +209,17 @@ layers:
     - CAPS
     - LEFT
     - RIGHT
-    - {t: BKSP, type: held}
+    - BKSP
     - DEL
     - LCTRL
     - PG DN
     - ENTER
     - SPACE
     - UP
-  - [DOWN, '[', ']', prime]
+  - - DOWN
+    - '['
+    - ']'
+    - {t: prime, type: held}
   Mod:
   - - ''
     - {t: BT, h: '0'}

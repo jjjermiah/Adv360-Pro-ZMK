@@ -128,7 +128,7 @@
 			bindings = <
 			&kp EQUAL      &kp N1     		&kp N2    		&kp N3         &kp N4         &kp N5   &tog 1                                                                      					&mo 4       &kp N6     &kp N7         &kp N8      	&kp N9     	&kp N0     		&pl_pctn
 			&kp TAB        &kp Q      		&kp W     		&kp E          &kp R          &kp T    &kp FSLH                                                                       				&kp BSLH    &kp Y      &kp U          &kp I       	&kp O      	&kp P      		&kp MINUS
-			&Mac_Save      &hml LGUI A    	&hml LALT S    	&hml LSHFT D   &hml LCTRL F   &kp G    &col_semi          		&psa LS(LALT) PIPE   &kp LALT    &kp LGUI    &kp RCTRL           	&quo       	&kp H      &hmr RCTRL J   &hmr RSHFT K  &hmr RALT L &hmr RGUI SEMI  &kp SQT
+			&Mac_Save      &hml LGUI A    	&hml LALT S    	&hml LSHFT D   &hml LCTRL F   &kp G    &col_semi          		&psa LS(LALT) PIPE   &kp LC(LALT) &kp LG(LALT) &kp RCTRL           	&quo       	&kp H      &hmr RCTRL J   &hmr RSHFT K  &hmr RALT L &hmr RGUI SEMI  &kp SQT
 			&kp LSHFT      &kp Z      		&kp X     		&kp C          &kp V          &kp B                                 				 &kp LGUI    &kp PG_UP                                   	&kp N      &kp M          &kp COMMA   	&kp DOT    	&hash_prcnt   	&kp RSHFT
 			&fn_save 2 0   &kp GRAVE  		&alf 	  		&kp LEFT       &kp RIGHT                			&kp BSPC    &esc_alt LALT ESC    &kp LCTRL   &kp PG_DN   &kp ENTER   &kp SPACE              &kp UP     &kp DOWN       &dollar_at    &kp LBKT   	&mo 3
 			>;

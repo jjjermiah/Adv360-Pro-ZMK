@@ -9,10 +9,16 @@ SELINUX1 := :z
 SELINUX2 := ,z
 endif
 
-.PHONY: all left clean_firmware clean_image clean
+.PHONY: all build flash left clean_firmware clean_image clean
 
 all:
 	@bin/build_all.sh
+
+build:
+	@bin/build_all.sh --build-only
+
+flash:
+	@pixi run bash bin/flash-adv360.sh
 
 # left:
 # 	$(shell bin/get_version_local.sh clique >> /dev/null)
