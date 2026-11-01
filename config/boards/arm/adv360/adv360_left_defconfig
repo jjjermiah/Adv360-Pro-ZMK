@@ -77,6 +77,4 @@ CONFIG_ZMK_BEHAVIOR_LOCAL_ID_TYPE_CRC16=y
 
 CONFIG_ZMK_POINTING=y
 
-# ZMK Studio support for runtime keymap inspection
-CONFIG_ZMK_STUDIO=y
-CONFIG_ZMK_STUDIO_RPC=y
+# Enable Studio only with the studio-rpc-usb-uart snippet (Clique build).
